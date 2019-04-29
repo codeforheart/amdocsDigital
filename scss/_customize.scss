@@ -1,0 +1,94 @@
+// text effect - profile section
+.animation-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p {
+    width: 80%;
+    font-size: 20px;
+    display: block;
+    //text-align: center;
+}
+
+
+/* .char {
+    font-size: 20px;
+    height: 20px;
+    animation: textAnimation 1s ease-out 1 both;
+    display: inline-block;
+}
+
+@keyframes textAnimation {
+    from {
+        opacity: 0;
+        transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+    }
+    to {
+        opacity: 1;
+        transform: perspective(500px) translate3d(0, 0, 0);
+    }
+} */
+
+// solutions
+.custom-row {
+    justify-content: center;
+    .info-box {
+        border: 1px solid #cdcdcd;
+        border-radius: 10px;
+        margin: 1em;
+        height: 400px;
+        opacity: 0;
+        &.show {
+            animation: fadein 1s;
+            opacity: 1;
+        }
+    }
+}
+
+// management
+.card {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    .img-box {
+        flex: 1 1 auto;
+        padding: 1.25rem;
+        .img-wrapper {
+            border-radius: 50%;
+            overflow: hidden;
+            align-items: center;
+            &:hover {
+                animation: enlargeImage ease-out 0.1s;
+                width: 150%;
+                z-index: 100;
+                position: absolute;
+                left: -25%;
+            }
+        }
+    }
+}
+
+// animation effects
+@keyframes fadein {
+    from {
+        opacity: 0;
+        margin-top: 8em;
+    }
+    to {
+        opacity: 1;
+        margin-top: 1em;
+    }
+}
+
+@keyframes enlargeImage {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 150%;
+    }
+}
